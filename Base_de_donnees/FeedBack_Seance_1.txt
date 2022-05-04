@@ -1,0 +1,23 @@
+*Faire un Quiz sur le site 
+
+*Proposer un modèle EA 
+
+*Base De Données :
+Facultatif :	 APP_VOLET_Historique_Reponses
+			 APP_VOLET_Questionsquizz
+			 APP_VOLET_	
+
+
+APP_VOLET_Commentaires()
+
+APP_VOLET_Capteurs(**id_capteur,nom,type_capteur,unite,valmin,valmax)
+
+APP_VOLET_Mesure(**id_mesure,id_capteur,instant,valeur)
+
+APP_VOLET_Membresapp(id_membre,nom,prenom,specialite)
+
+APP_VOLET_Actionneur()
+
+APP_VOLET_
+
+
