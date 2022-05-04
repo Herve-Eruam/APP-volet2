@@ -1,0 +1,57 @@
+#menu {
+	position : absolute ;
+	background-color : #FFE4C4 ; 
+	width : 200px;
+    height: 100%;
+	clear: right;
+
+	
+}
+
+#main {
+	position : static ;
+	background-color : #EFD4B4; 
+	width : 100 %;
+    height: 900px;
+	margin-left : 200px;
+
+}
+
+.boutton_menu {
+	
+	/*Angle pour le coté gauche haut de chaque case*/
+	-webkit-border-top-left-radius:10px;
+    -moz-border-radius-topleft:10px; 
+	border-top-left-radius:10px;
+	
+	/*Angle pour le coté gauche basse de chaque case*/
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft:10px;
+	border-bottom-left-radius:10px; 
+
+	/*dimension des bordures */
+	border-top: 3px solid #40AAD4;
+	border-right: 0px solid #40AAD4;
+	border-bottom: 3px solid #40AAD4;
+	border-left: 1px solid #40AAD4;
+
+	/* Parametres de la police */
+	color:#333333;
+	font-family:Arial Black;
+	font-size:16px;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+	text-align : center;
+	
+	/* Parametre est dimension des boites */
+	height:35px;
+	line-height:30px;
+	width:195px;
+	margin-top : 10px;
+	margin-left : 5px;	
+	display:inline-block;
+	background-color : #EFD4B4;
+	
+
+}
