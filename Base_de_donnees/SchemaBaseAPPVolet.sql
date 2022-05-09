@@ -1,33 +1,29 @@
-drop table if exists APP_VOLET_Membres cascade;
-drop table if exists APP_VOLET_Capteurs cascade;
-drop table if exists APP_VOLET_Mesures cascade;
-drop table if exists APP_VOLET_Commentaires cascade;
+drop table if exists AppVolet_Groupe cascade;
+drop table if exists AppVOLET_Techno cascade;
+drop table if exists AppVOLET_Mesures cascade;
 
 
-
-create table APP_VOLET_Membres(id_membre integer auto_increment primary key,
+create table AppVolet_Groupe(id_membre integer auto_increment primary key,
 		nom varchar(30),
 		prenom varchar(30),
-		genre varchar(1) /* H ou F */
+		genre varchar(1), /* H ou F */
+		description varchar(200),
+		nom_photo varchar(20)
 		);
 
-create table APP_VOLET_Capteurs(id_capteur integer auto_increment primary key,
+create table AppVOLET_Techno(id_techno integer auto_increment primary key,
 		nom varchar(10),
 		type_capteur varchar(30),
 		unite varchar(5),
-		valmin numeric,
-		valmax numeric
 		);
 
-create table APP_VOLET_Mesures(id_mesure integer auto_increment primary key,
+create table AppVOLET_Mesures(id_mesure integer auto_increment primary key,
 		id_capteur integer,
 		instant timestamp,
 		valeur numeric
 		);
 
-create table APP_VOLET_Commentaires(id_commmentaire integer auto_increment primary key,
-		      texte varchar(300)
-		      );
+
 
 alter table APP_VOLET_Mesures add constraint fk_capteur foreign key (id_capteur) references APP_VOLET_Capteurs(id_capteur);
 
