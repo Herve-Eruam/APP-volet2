@@ -1,33 +1,33 @@
             /*Insertion des MEMBRES DE L APP*/
-insert into AppVolet_Groupe(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'ERUAM', 
     'Herve', 
     'M',
     "Moi c est herve eruam" ,
     "herveruam.jpg"   );
 
-insert into AppVolet_Groupe(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'MEYER', 
     'Johan', 
     'M',
     "Moi c est Johan Meyer" ,
     "johanmeyer.jpg"    );
 
-insert into AppVolet_Groupe(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'DESAGE', 
     'Hippolyte', 
     'M',
     "Moi c est Hippolyte" ,
     "hippolytedesage.jpg"   );
 
-insert into AppVolet_Groupe(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'DALENC', 
     'Nathan', 
     'M',
     "Moi c est Nathan Dalenc" ,
     "nathandalenc.jpg"   );
 
-insert into AppVolet_Groupe(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'YOVODEVI', 
     'Zaide', 
     'M',

@@ -7,7 +7,7 @@ create table AppVolet_Groupe(id_membre integer auto_increment primary key,
 		nom varchar(30),
 		prenom varchar(30),
 		genre varchar(1), /* H ou F */
-		description varchar(200),
+		descriptions varchar(200),
 		nom_photo varchar(20)
 		);
 
