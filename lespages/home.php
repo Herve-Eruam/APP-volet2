@@ -1,3 +1,4 @@
+﻿
 ﻿<html> 
 
    <head>
@@ -41,3 +42,4 @@
    </body>
 
 </html>
+>>>>>>> 1ae1d923876bc6c294c3cf959925fedb99fe1572:lespages/home.php
