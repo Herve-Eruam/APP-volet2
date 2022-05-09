@@ -38,8 +38,7 @@ function BDD_request($sql_request){
             echo   " ACTIF</span>";
         }
         
-     
-
-
  }
+
+ echo printStatus("");
 ?> 

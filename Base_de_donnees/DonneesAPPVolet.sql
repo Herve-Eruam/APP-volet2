@@ -38,8 +38,8 @@ insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'YOVODEVI', 
     'Zaide', 
     'M',
-    "Moi c est Nathan Dalenc" ,
-    "nathandalenc.jpg"  );
+    "Moi c est Zaide Yovodevi" ,
+    "zaide.jpg" );
 
 
             /*Insertion des Technologies*/
