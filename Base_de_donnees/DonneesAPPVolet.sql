@@ -7,6 +7,13 @@ insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     "herveruam.jpg"   );
 
 insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
+    'BENITO', 
+    'Enzo', 
+    'M',
+    "Moi c est benito enzo" ,
+    "enzobenito.jpg"   );
+
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'MEYER', 
     'Johan', 
     'M',
