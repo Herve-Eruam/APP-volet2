@@ -40,4 +40,6 @@ include 'php_functions/bdd_connect.php'
 
 </body>
 
+
+
 </html>
