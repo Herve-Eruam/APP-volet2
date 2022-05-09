@@ -1,12 +1,12 @@
             /*Insertion des MEMBRES DE L APP*/
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre) values (
     'ERUAM', 
     'Herve', 
     'M',
     "Moi c est herve eruam" ,
     "herveruam.jpg"   );
 
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre) values (
     'MEYER', 
     'Johan', 
     'M',
