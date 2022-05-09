@@ -61,7 +61,7 @@ VALUES("Capteur de courant","Capteur","Ampere","Boitier de commande","Pour déte
 
 
             /*Insertion des Mesures*/
-INSERT INTO AppVOLET_Mesures (id_capteur,instant,valeur) VALUES (
+INSERT INTO AppVOLET_Mesures (id_techno,instant,valeur) VALUES (
     (select id_techno from AppVOLET_Techno where nom like 'Capteur de temperature'),
     timestampadd(HOUR, 4, '2022-05-18'),
     16);
