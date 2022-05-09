@@ -45,6 +45,55 @@
 	height: 60px;
 }
 
+#ShowMembreAll {
+
+}
+
+#Showmembres {
+	position: absolute;
+	font-style: italic;
+	background-color: #EFD4B4;
+	margin-top: 12px;
+	border-bottom: 1px solid #708090;
+	border-top: 1px solid #708090;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+#ShowMemberTitre {
+	width: 300px;
+	position: absolute;
+	background-color: #EFD4B4;
+	font-style: italic;
+	color: #708090;
+	font-size: 20px;
+	z-index: 5;
+}
+
+#addMembre {
+	position: absolute;
+	font-style: italic;
+	background-color: #EFD4B4;
+	margin-top: 500px;
+	border-bottom: 1px solid #708090;
+	border-top: 1px solid #708090;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+#AddMemberTitre {
+	margin-top: 490px;
+	width: 300px;
+	position: absolute;
+	background-color: #EFD4B4;
+	font-style: italic;
+	color: #708090;
+	font-size: 20px;
+	z-index: 5;
+}
+
 .bouttons_menu {
 	/*Angle pour le coté gauche haut de chaque case*/
 	-webkit-border-top-left-radius: 10px;
