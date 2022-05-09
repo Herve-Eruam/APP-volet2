@@ -26,6 +26,9 @@ include 'php_functions/bdd_connect.php'
 
 	   		<div id="pied">
 	   			<span>Polytech Annecy-Chambéry promotion 2024</span>
+				<?php
+					printStatus("");
+				?>
 	   		</div>
 
 	   </div>
