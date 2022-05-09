@@ -21,7 +21,25 @@ function BDD_connect(){
 $conn = BDD_connect();
 		
 function BDD_request($sql_request){
+    global $conn;
         $result =  mysqli_query($conn, $sql);
 }
 
+ function printStatus($class_css){
+         global $conn;
+
+        echo "<span ";
+        echo $class_css;
+        echo "> Statut de le connection a la base de donnees:";
+        if($conn == false){
+            echo   " INACTIF</span>";
+
+        }else{
+            echo   " ACTIF</span>";
+        }
+        
+     
+
+
+ }
 ?> 
