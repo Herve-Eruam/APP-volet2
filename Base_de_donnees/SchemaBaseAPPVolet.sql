@@ -28,7 +28,7 @@ create table AppVOLET_Mesures(id_mesure integer auto_increment primary key,
 
 
 
-
+alter table AppVOLET_Mesures add constraint fk_capteur foreign key (id_techno) references AppVOLET_Techno(id_techno);
 /*
 alter table candidat add constraint fk_membre_f foreign key (id_jury_f) references membre_jury(id_membre);
 alter table candidat add constraint fk_membre_m foreign key (id_jury_m) references membre_jury(id_membre);
