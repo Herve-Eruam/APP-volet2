@@ -1,132 +1,71 @@
             /*Insertion des MEMBRES DE L APP*/
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'ERUAM', 
     'Herve', 
-    'M');
+    'M',
+    "Moi c est herve eruam" ,
+    "herveruam.jpg"   );
 
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'MEYER', 
     'Johan', 
-    'M');
+    'M',
+    "Moi c est Johan Meyer" ,
+    "johanmeyer.jpg"    );
 
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'DESAGE', 
-    'Hyppolite', 
-    'M');
+    'Hippolyte', 
+    'M',
+    "Moi c est Hippolyte" ,
+    "hippolytedesage.jpg"   );
 
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'DALENC', 
     'Nathan', 
-    'M');
+    'M',
+    "Moi c est Nathan Dalenc" ,
+    "nathandalenc.jpg"   );
 
-insert into APP_VOLET_Membres(nom,prenom,genre) values (
+insert into AppVolet_Groupe(nom,prenom,genre,descriptions,nom_photo) values (
     'YOVODEVI', 
     'Zaide', 
-    'M');
+    'M',
+    "Moi c est Nathan Dalenc" ,
+    "nathandalenc.jpg"  );
 
 
-            /*Insertion de Commentaires*/
+            /*Insertion des Technologies*/
 
-            /*Insertion des Capteurs*/
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'temp1', 
-    'temperature', 
-    'degre', 
-     -40, 
-     80) ;
-
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'temp2', 
-    'temperature', 
-    'degre', 
-     -40, 
-     80) ;
-
-
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'lum1', 
-    'luminosite', 
-    'klux', 
-     0, 
-     200) ;
-
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'lum2', 
-    'luminosite', 
-    'klux', 
-     0, 
-     200) ;
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES( "Pont en H","Actionneur","NULL","Boitier de commande","Pour le contrôle des moteurs a courant continue déjà présent sur la maquette, nous avons opter pour un pont en H relativement simple. Notre projet ne nécessitant pas un contrôle précis des moteurs, un module plus complexe n’aurait pas apporter de plus-value suffisante pour justifier la complexification du système. Le pont en H doit supporter une tension de 25V et un ampérage allant jusqu’à 2A pour ne pas être surchargé et détruit lors des pics d’intensité dans le fonctionnement des moteurs.");
+/*--------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES( "Moteur","Actionneur","NULL","Boitier de commande","Le moteur permet le bon fonctionnement du dispositif");
+/*--------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES("Raspberry","Intelligence","NULL","Boitier de commande","Pour notre projet,nous avons besoin d’un microcontrôleur capable de récupérer l’ensemble des mesures en provenance des différents capteurs équipant le volet, pouvant générer des signaux numériques cycliques pour contrôler le module de puissance (pont en H),disposant d’une connexion sans fil pour pouvoir rendre notre projet communiquant suffisamment puissant pour faire tourner les programmes contrôlant le volet, le serveur web, une base de données MySQL et éventuellement le serveur MQTT. Pour répondre à ces besoins, nous avons opté pour une carte Raspberry Pi 3 B+ qui possède 1 GB de ram et une connexion wifi (et Ethernet). Elle possède également l’avantage d’être très rependue dans le monde et possède donc une bonne documentation.");
+/*---------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES("Capteur de presence","Capteur","NULL","Interieur","Nous voulons integrer un capteur de presence à notre volet pour qu'à partir d'une certaine heure, si il y a du mouvement dans la maison, les volets puissent s'ouvrir.");
+/*--------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES("Capteur de temperature","Capteur","degre","Exterieur et Interieur","Toujours dans l’objectif de pouvoir gérer le volet de façons « intelligente » nous avons besoin de deux capteurs de température. Un de ces derniers devant être à l’extérieur, ils devront supporter des températures allant au minimum de -15°C à 40°C.Celui-ci doit également fournir un signal numérique, les signaux analogiques n’étant pas supportés par la Raspberry pi, il faudrait un convertisseur analogique à numérique séparé qui viendrait complexifier le système inutilement.Nous avons donc opté pour le modèle DHT22 qui propose une plage de mesure allant de -40°C à 80°C avec une précision de +- 0.5°C. Il propose également une mesure de l’humidité que nous ne prévoyons pas d’utiliser dans la gestion du volet qui permettra d’informer l’utilisateur.");
+/*-------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES("Capteur de luminosite","Capteur","lux","Exterieur","Pour pouvoir gérer le volet de façons « intelligente » nous avons besoin de deux capteurs de luminosité. Un de ces derniers devant être à l’extérieur, ils devront supporter des températures allant au minimum de -15°C à 40°C. Celui-ci doit également fournir un signal numérique, les signaux analogiques n’étant pas supportés par la Raspberry pi, il faudrait un convertisseur analogique à numérique séparé qui viendrait complexifier le système inutilement.");
+/*-------------------------------------------------------*/
+INSERT INTO AppVOLET_Techno(nom,types,unite,position,descript)
+VALUES("Capteur de courant","Capteur","Ampere","Boitier de commande","Pour détecter les fins de courses sans avoir à placer des capteurs fins de courses peux esthétique nous avons décider d’utiliser deux multimètres numériques brancher sur les bornes des moteurs. Ceux-ci permettront également de détecter les blocages en course du volet. Pour cela, nous avons choisi les modèles SEN0291 de DFROBOT qui peut mesurer des courant jusque 5A pour une tension de 65V.");
+/*------------------------------------------------------*/
 
 
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'cour1', 
-    'courant', 
-    'Ampere', 
-     -8, 
-     8) ;
+            /*Insertion des Mesures*/
+INSERT INTO AppVOLET_Mesures (id_capteur,instant,valeur) VALUES (
+    (select id_techno from AppVOLET_Techno where nom like 'Capteur de temperature'),
+    timestampadd(HOUR, 4, '2022-05-18'),
+    16);
 
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'cour2', 
-    'courant', 
-    'Ampere', 
-     -8, 
-     8) ;
-
-INSERT INTO APP_VOLET_Capteurs (nom, type_capteur, unite, valmin, valmax) VALUES (
-    'pres1', 
-    'presence', 
-    'portee(metre)', 
-     3.2, 
-     12) ;
-
-
-                /*Insertion des Mesures*/
-
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'temp1'),
-    timestampadd(HOUR, 4, '2009-05-18'),
-    16
-    );
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'temp2'),
-    timestampadd(HOUR, 8, '2009-05-18'),
-    20
-    );
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'lum1'),
-    timestampadd(HOUR, 0, '2009-05-18'),
-    97
-    );
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'lum2'),
-    timestampadd(HOUR, 0, '2009-05-18'),
-    120
-    );
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'cour1'),
-    timestampadd(HOUR, 3, '2009-05-18'),
-    5
-    );
-
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from APP_VOLET_Capteurs where nom like 'cour2'),
-    timestampadd(HOUR, 4, '2009-05-18'),
-    7
-    );
-INSERT INTO APP_VOLET_Mesures (id_capteur,instant,valeur) VALUES (
-    (select id_capteur from capteur where nom like 'pres1'),
-    timestampadd(HOUR, 2, '2009-05-18'),
-    7
-    );
-
-
-
-            /*Insertion de Commentaires */
 
 
 
