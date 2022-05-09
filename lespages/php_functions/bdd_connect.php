@@ -22,7 +22,7 @@ $conn = BDD_connect();
 		
 function BDD_request($sql_request){
     global $conn;
-        $result =  mysqli_query($conn, $sql);
+        $result =  mysqli_query($conn, $sql_request);
 }
 
  function printStatus($class_css){
