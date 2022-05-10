@@ -1,0 +1,78 @@
+﻿#menu {
+	position: absolute;
+	background-color : #FFE4C4 ; 
+	width: 300px;
+	height: 100%;
+	clear: right;
+	border-left: 1px solid #708090;
+	border-bottom: 1px solid #708090;
+	border-right: 1px solid #708090;
+	border-top: 1px solid #708090;
+}
+
+#pied {
+	margin: 450px 0px 10px 0px;
+	color: #7B7B7B;
+	text-align: left;
+}
+
+#espace_menu {
+	width: 300px;
+	height: 60px;
+}
+
+.bouttons_menu {
+	/*Angle pour le coté gauche haut de chaque case*/
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+
+	/*dimension des bordures */
+	border-top: 1px solid #708090;
+	border-bottom: 1px solid #708090;
+
+	/* Parametres de la police */
+	color: #333333;
+	font-family: Camria;
+	font-size: 20px;
+	font-style: italic;
+	text-decoration: none;
+	text-align: center;
+
+	/* Parametre est dimension des boites */
+	height: 35px;
+	line-height: 30px;
+	width: 300px;
+	margin-top: 15px;
+	display: inline-block;
+	opacity : 0,33;
+}
+
+.bouttons_menu:hover {
+	/* Parametre des dimension des boites quand on clique dessus */
+	height: 45px;
+	line-height: 40px;
+	width: 295px;
+	margin-top: 20px;
+	margin-left: 5px;
+
+	/* Parametre des couleurs des boites quand on clique dessus */
+	border-top: 3px solid #708090;
+	border-right: 0px solid #708090;
+	border-bottom: 3px solid #708090;
+	border-left: 3px solid #708090;
+	color: #770a0c;
+/*	opacity : 0.66;*/
+
+	/*Angle des bordure quand on clique */
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft:10px;
+	border-bottom-left-radius:10px;
+
+	-webkit-border-top-left-radius:10px;
+    -moz-border-radius-topleft:10px; 
+	border-top-left-radius:10px;
+	
+}
+
+

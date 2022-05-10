@@ -6,32 +6,16 @@ include 'php_functions/bdd_connect.php'
    <head>
    
 	    <meta charset="UTF-8"> 
-		<link rel="stylesheet" href="home.css">
-		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/groupe.css">
+
    </head> 
 
    <body>
 
-	   <div id=menu>
-
-		   <div id=espace>
-
-		   </div>
-
-	   		<a href="home.php" class="bouttons_menu" id="boutton_menu">Menu</a>
-	   		<a href="technologie.php" class="bouttons_menu" id="boutton_technologie">Technologies</a>
-	   		<a href="groupe.php" class="bouttons_menu" id="boutton_groupe">Groupe</a>
-	   		<a href="quizz.php" class="bouttons_menu" id="boutton_quizz">Quizz</a>
-	   		<a href="mesures.php" class="bouttons_menu" id="boutton_mesures">Mesures</a>
-
-	   		<div id=pied>
-	   			<span>Polytech Annecy-Chambéry promotion 2024</span>
-				<?php
-					printStatus("");
-				?>
-	   		</div>
-
-	   </div>
+	  	﻿<?php
+			include 'php_functions/menu.php'
+		?>
 		
 		<div id=main>
 
@@ -46,21 +30,35 @@ include 'php_functions/bdd_connect.php'
 				</div>
 
 				<div id=Showmembres>
-					<form action="" method="get">
-					<select name="act"> 
-						<?php
-							echo "<option value=\"\">--Choix du membre du groupe--</option>";
-							while ($val1 = mysqli_fetch_array($result1)) {
-								echo "<option value=".$val1['id_actionneur'].">" . $val1['nom']. "</option>";
-							}
-						?>
+					<form action="groupe.php" method="get">
+						<select name="membre_select"> 
+							<?php
+								$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVOLET_Groupe");
+								echo "<option value=\"\">--Choix du membre du groupe--</option>";
+								while ($val = mysqli_fetch_array($result)) {
+									if(!empty($_GET['membre_select']) && $_GET['membre_select']==$val['id_membre']) $selected ='selected'; else $selected ='';
+									echo "<option " .$selected ." value=".$val['id_membre'].">" . $val['nom'] . " " . $val1['prenom'] ."</option>";
+								}
+							?>
+						</select>
+						<input type="submit" name="" value="visualiser le membre">
 					</form>
-					</select>
 				</div>
 
+				<?php
+				if(!empty($_GET['membre_select'])){
+					$sql_request = "SELECT nom_photo, descriptions FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'];
+					$result = BDD_request($sql_request);
+					$val = mysqli_fetch_array($result);
+					echo "<img src=\"../photos/" .$val["nom_photo"] ."\" height=\"300\">";
+					echo "<p>" .$val["descriptions"] ." </p>" ;
+
+				}
+				?>
+		
 			</div>
 
-			<div id= AddMemberTitre>
+			<div id=AddMemberTitre>
 				  &nbsp &nbsp &nbsp &nbsp Ajouter un membre au groupe 
 			</div>
 

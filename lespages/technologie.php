@@ -7,28 +7,14 @@ include 'php_functions/bdd_connect.php'
    <head>
    
 	    <meta charset="UTF-8"> 
-		<link rel="stylesheet" href="home.css">
+		<link rel="stylesheet" href="css/main.css">
 		
    </head> 
 
    <body> 
-	   <div id=menu>
-
-		   <div id="espace">
-
-		   </div>
-
-	   		<a href="home.php" class="bouttons_menu" id="boutton_menu">Menu</a>
-	   		<a href="technologie.php" class="bouttons_menu" id="boutton_technologie">Technologies</a>
-	   		<a href="groupe.php" class="bouttons_menu" id="boutton_groupe">Groupe</a>
-	   	<a href="quizz.php" class="bouttons_menu" id="boutton_quizz">Quizz</a>
-	   		<a href="mesures.php" class="bouttons_menu" id="boutton_mesures">Mesures</a>
-
-	   		<div id="pied">
-	   			<span>Polytech Annecy-Chambéry promotion 2024</span>
-	   		</div>
-
-	   </div>
+	   	﻿<?php
+			include 'php_functions/menu.php'
+		?>
 		
 	   <div id=main>
 
@@ -45,7 +31,7 @@ include 'php_functions/bdd_connect.php'
 			   	<div id="c1">
 				   
 				   <?php 
-				   $sql= "SELECT DISTINCT (nom ,types, position, unite, descript) FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
+				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
 
 				   $result = BDD_request($sql);
 
@@ -61,7 +47,8 @@ include 'php_functions/bdd_connect.php'
 
 			   <div id="c2">
 			   <?php 
-				   $sql= "SELECT DISTINCT (nom ,types, position, unite, descript) FROM AppVOLET_Techno  WHERE  types = capteur and  nom= Capteur de luminosite";
+			   /*
+				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = capteur and  nom= Capteur de luminosite";
 
 				   $result = BDD_request($sql);
 
@@ -71,14 +58,15 @@ include 'php_functions/bdd_connect.php'
 				   echo "<br>";
 				   echo "<li>"."Les capteurs de Luminosités sont positionés".$row["position"]."</li><br>";
 				   echo"<li>".$row["descript"]."</li><br>";
-				   
+				   */
 				   ?>
 			   
 			   </div>
 
 			   <div id="c3">
 			   <?php 
-				   $sql= "SELECT DISTINCT (nom ,types, position, unite, descript) FROM AppVOLET_Techno  WHERE  types = capteur and  nom= position";
+			   /*
+				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = capteur and  nom= position";
 
 				   $result = BDD_request($sql);
 
@@ -88,14 +76,15 @@ include 'php_functions/bdd_connect.php'
 				   echo "<br>";
 				   echo "<li>"."Les capteurs de Positions sont positionés".$row["position"]."</li><br>";
 				   echo"<li>".$row["descript"]."</li>\<br>";
-				   
+				  */ 
 				   ?>
 
 			   </div>
 
 			   <div id="c4">
 			   <?php 
-				   $sql= "SELECT DISTINCT (nom ,types, position, unite, descript) FROM AppVOLET_Techno  WHERE  types = capteur and  nom= courant";
+			   /*
+				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = capteur and  nom= courant";
 
 				   $result = BDD_request($sql);
 
@@ -105,7 +94,7 @@ include 'php_functions/bdd_connect.php'
 				   echo "<br>";
 				   echo "<li>"."Les capteurs de courants sont positionés".$row["position"]."</li><br>";
 				   echo"<li>".$row["descript"]."</li><br>";
-				   
+				   */
 				   ?>
 			   </div>
 			</div>

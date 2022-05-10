@@ -22,10 +22,17 @@ $conn = BDD_connect();
 		
 function BDD_request($sql_request){
     global $conn;
-        $result =  mysqli_query($conn, $sql_request);
+    $result =  mysqli_query($conn, $sql_request);
+    if($result == false){
+        echo "<span> Impossible d'effectuer la requete: ";
+        echo $sql_request;
+        echo   " </span>";
+
+    }
+    return $result;
 }
 
- function printStatus($class_css){
+ function printStatus($class_css){ // affiche le statu le la bdd, possibilité d'incorperer balise id ou class via le parametre '
          global $conn;
 
         echo "<span ";
@@ -40,5 +47,4 @@ function BDD_request($sql_request){
         
  }
 
- echo printStatus("");
 ?> 

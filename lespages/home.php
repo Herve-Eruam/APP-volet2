@@ -7,30 +7,16 @@ include 'php_functions/bdd_connect.php'
    <head>
    
 	    <meta charset="UTF-8"> 
-		<link rel="stylesheet" href="home.css">
-		
+		<link rel="stylesheet" href="css/main.css">
+
    </head> 
 
    <body> 
-		<div id = menu>
 
-				<div id="espace">
+		﻿<?php
+			include 'php_functions/menu.php'
+		?>
 
-			   </div>
-		
-					<a href="home.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
-                    <a href="technologie.php" class ="bouttons_menu" id="boutton_technologie">Technologies</a>
-                    <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
-					<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>
-                    <a href="mesures.php" class ="bouttons_menu" id="boutton_mesures">Mesures</a>
-
-					<div id="pied">
-						<span>Polytech Annecy-Chambéry promotion 2024</span>
-						<?php
-							printStatus("");
-						?>
-					</div>
-		</div>
 
 		<div id=main>
 
@@ -48,4 +34,3 @@ include 'php_functions/bdd_connect.php'
    </body>
 
 </html>
->>>>>>> 1ae1d923876bc6c294c3cf959925fedb99fe1572:lespages/home.php

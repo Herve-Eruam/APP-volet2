@@ -1,0 +1,30 @@
+﻿
+#main {
+	position: absolute;
+	background-color: #EFD4B4;
+	width: 80%;
+	height: 100%;
+	margin-left: 300px;
+	border-left: 1px solid #708090;
+	border-bottom: 1px solid #708090;
+	border-right: 1px solid #708090;
+	border-top: 1px solid #708090;
+}
+
+
+
+#titre {
+	color: #333333;
+	font-family: Camria;
+	font-size: 20px;
+	font-style: italic;
+	text-align: center;
+	text-shadow: #ffe69a 0 -1px 0, #ff6767 2px 2px 0, #ca3333 3px 3px 0, #770a0c 4px 4px 0, #333 5px 5px 10px;
+	color: #FFE5BF;
+	background: linear-gradient(60deg, #708090  ,#EFD4B4,#708090 );
+	opacity: 0.7;
+}
+
+
+
+
