@@ -1,5 +1,8 @@
-﻿﻿<?php
-include 'php_functions/bdd_connect.php'
+<?php
+session_save_path("../sessionPhp");
+session_start();
+
+include 'php_functions/bdd_connect.php';
 ?>
 
 <html> 

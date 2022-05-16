@@ -1,5 +1,8 @@
-﻿﻿<?php
-include 'php_functions/bdd_connect.php'
+<?php 
+session_save_path("../sessionPhp");
+session_start();
+include 'php_functions/bdd_connect.php';
+
 ?>
 <html> 
 
@@ -61,6 +64,23 @@ include 'php_functions/bdd_connect.php'
 			<div id=AddMemberTitre>
 				  &nbsp &nbsp &nbsp &nbsp Ajouter un membre au groupe 
 			</div>
+
+			<?php
+			if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
+			{
+			?>
+			<div id=addMembre>
+				<form method="get">
+					<p>Nom du membre <input type="text" name="nom"  required /></p>
+					<p>Prenom du membre <input type="text" name="prenom" required /></p>
+					<p>Description <input type="text" name="description" required /></p>
+					<p><button type="submit" name="button1" value="ajout">Admin le membre</button></p>
+				</form>
+			</div>
+			<?php
+			}
+			?>
+
 
 			<div id=addMembre>
 				<form method="get">
