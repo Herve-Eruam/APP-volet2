@@ -46,49 +46,54 @@ include 'php_functions/bdd_connect.php';
 						</select>
 						<input type="submit" name="" value="visualiser le membre">
 					</form>
+					<?php
+					if(!empty($_GET['membre_select'])){
+						$sql_request = "SELECT nom_photo, descriptions FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'];
+						$result = BDD_request($sql_request);
+						$val = mysqli_fetch_array($result);
+						echo "<img src=\"../photos/" .$val["nom_photo"] ."\" height=\"300\">";
+						echo "<p>" .$val["descriptions"] ." </p>" ;
+
+					}
+					?>
 				</div>
 
-				<?php
-				if(!empty($_GET['membre_select'])){
-					$sql_request = "SELECT nom_photo, descriptions FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'];
-					$result = BDD_request($sql_request);
-					$val = mysqli_fetch_array($result);
-					echo "<img src=\"../photos/" .$val["nom_photo"] ."\" height=\"300\">";
-					echo "<p>" .$val["descriptions"] ." </p>" ;
-
-				}
-				?>
+				
 		
 			</div>
 
-			<div id=AddMemberTitre>
-				  &nbsp &nbsp &nbsp &nbsp Ajouter un membre au groupe 
-			</div>
+			<div id=AddMembreAll>
 
-			<?php
-			if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
-			{
-			?>
-			<div id=addMembre>
-				<form method="get">
-					<p>Nom du membre <input type="text" name="nom"  required /></p>
-					<p>Prenom du membre <input type="text" name="prenom" required /></p>
-					<p>Description <input type="text" name="description" required /></p>
-					<p><button type="submit" name="button1" value="ajout">Admin le membre</button></p>
-				</form>
-			</div>
-			<?php
-			}
-			?>
+				<div id=AddMemberTitre>
+					  &nbsp &nbsp &nbsp &nbsp Ajouter un membre au groupe 
+				</div>
+
+				<?php
+				if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
+				{
+				?>
+				<div id=addMembre>
+					<form method="get">
+						<p>Nom du membre <input type="text" name="nom"  required /></p>
+						<p>Prenom du membre <input type="text" name="prenom" required /></p>
+						<p>Description <input type="text" name="description" required /></p>
+						<p><button type="submit" name="button1" value="ajout">Admin le membre</button></p>
+					</form>
+				</div>
+				<?php
+				}
+				?>
 
 
-			<div id=addMembre>
-				<form method="get">
-					<p>Nom du membre <input type="text" name="nom"  required /></p>
-					<p>Prenom du membre <input type="text" name="prenom" required /></p>
-					<p>Description <input type="text" name="description" required /></p>
-					<p><button type="submit" name="button1" value="ajout">Ajouter le membre</button></p>
-				</form>
+				<div id=addMembre>
+					<form method="get">
+						<p>Nom du membre <input type="text" name="nom"  required /></p>
+						<p>Prenom du membre <input type="text" name="prenom" required /></p>
+						<p>Description <input type="text" name="description" required /></p>
+						<p><button type="submit" name="button1" value="ajout">Ajouter le membre</button></p>
+					</form>
+				</div>
+
 			</div>
 
 		</div>
