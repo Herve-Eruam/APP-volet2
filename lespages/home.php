@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_save_path("../sessionPhp");
 session_start();
 
@@ -24,7 +24,7 @@ include 'php_functions/bdd_connect.php';
 		<div id=main>
 
 			<div id="titre">
-				<h1 style="text-align:center;">APP volet batant automatrisé</h1>
+				<h1 style="text-align:center;">APP volet batant automatisé</h1>
 			</div>
 
 			<div id="video">
