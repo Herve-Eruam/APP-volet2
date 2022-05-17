@@ -25,7 +25,6 @@ if(!empty($_GET['membre_select']) and !empty($_GET['mdp'])){
 if(!empty($_GET['boutton_deconnexion'])){
 		$_SESSION["adminMode"] = false;
 	}
-echo md5("admin");
 ?>
 		
 
