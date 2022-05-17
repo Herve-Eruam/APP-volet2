@@ -2,12 +2,13 @@
 #ShowMembreAll {
 }
 
+
 #AddMembreAll {
-    margin-top: 500px;
+    bottom: 0;
 }
 
 #Showmembres {
-    position: absolute;
+    /*position: absolute;*/
     font-style: italic;
     background-color: #EFD4B4;
     margin-top: 12px;
@@ -29,10 +30,10 @@
 }
 
 #addMembre {
-    position: absolute;
+    /*position: absolute;*/
     font-style: italic;
     background-color: #EFD4B4;
-/*    margin-top: 500px;*/
+    /*    margin-top: 500px;*/
     border-bottom: 1px solid #708090;
     border-top: 1px solid #708090;
     text-align: center;
