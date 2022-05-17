@@ -13,12 +13,19 @@ if(!empty($_GET['membre_select']) and !empty($_GET['mdp'])){
 		$_SESSION["id_membre_connected"] = $_GET['membre_select'];
 		$_SESSION["mauvaisMdpCount"] = 0;
 	}else{
-		$_SESSION["mauvaisMdpCount"] = $_SESSION["mauvaisMdpCount"] + 1;
+		if(!isset($_SESSION["mauvaisMdpCount"])){
+			$_SESSION["mauvaisMdpCount"] = 1;
+		}else{
+			$_SESSION["mauvaisMdpCount"] = $_SESSION["mauvaisMdpCount"] + 1;
+		}
 	}
-	}
-	if(!empty($_GET['button_deconnexion'])){
+	
+	
+}
+if(!empty($_GET['boutton_deconnexion'])){
 		$_SESSION["adminMode"] = false;
 	}
+echo md5("admin");
 ?>
 		
 
@@ -74,7 +81,7 @@ if(!empty($_GET['membre_select']) and !empty($_GET['mdp'])){
 			}else{
 			?>
 				<form method=get">
-					<p><button type="submit" name="button_deconnexion" value="ajout">Deconnexion</button></p>
+					<p><button type="submit" name="boutton_deconnexion" value="deco">Deconnexion</button></p>
 				</form>
 			<?php
 			}
