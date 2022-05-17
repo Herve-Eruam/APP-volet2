@@ -2,7 +2,11 @@
 session_save_path("../sessionPhp");
 session_start();
 include 'php_functions/bdd_connect.php';
+if(!empty($_GET['membre_select']) and !empty($_GET['submit'])){
+	$sql_request = "UPDATE AppVOLET_Groupe SET descriptions = \"" .$_GET['description'] ."\" WHERE id_membre = " .$_GET["membre_select"] ;
+	$result = BDD_request($sql_request);
 
+	}
 ?>
 <html> 
 
@@ -61,11 +65,10 @@ include 'php_functions/bdd_connect.php';
 							<h3>Modification description</h3>
 							<div id=adminModif>
 								<form action="groupe.php" method="get">
-									<textarea name="description" rows="8" cols="45" maxlength=200>
-										Nouvelle description...
-									</textarea>
-									<intput type="hidden" name = "membre_select" value= <?php echo($_GET["membre_select"]); ?>>
-									<p><button type="submit" name="submit">upload</button></p>
+									<textarea name="description" rows="8" cols="45" maxlength=200>Nouvelle description...</textarea>
+									<input type="hidden" name="membre_select" value=<?php echo($_GET["membre_select"]); ?> />
+
+									<p><button type="submit" name="submit" value = "true">modifier</button></p>
 								</form>
 							</div>
 					<?php
