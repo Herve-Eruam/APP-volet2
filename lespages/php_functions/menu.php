@@ -8,7 +8,7 @@
 
 	</div>
 		
-	<a href="home.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
+	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
     <a href="technologie.php" class ="bouttons_menu" id="boutton_technologie">Technologies</a>
     <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
 	<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>

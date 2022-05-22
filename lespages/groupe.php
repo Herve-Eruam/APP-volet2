@@ -82,7 +82,7 @@ if(!empty($_GET['btn_ajout_membre'])){
 						$sql_request = "SELECT nom_photo, descriptions FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'];
 						$result = BDD_request($sql_request);
 						$val = mysqli_fetch_array($result);
-						echo "<img src=\"../photos/" .$val["nom_photo"] ."\" height=\"300\">";
+						echo "<img src=\"../documents/photos/" .$val["nom_photo"] ."\" height=\"300\">";
 						echo "<p>" .$val["descriptions"] ." </p>" ;
 						if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
 						{
