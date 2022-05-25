@@ -59,7 +59,7 @@ include 'php_functions/bdd_connect.php';
                 </ul>
             </div>
             
-            <embed src="../documents/presentation_S6.pdf"width=100% height=40.7% type='application/pdf'/>
+            <embed src="../documents/presentation_S6.pdf"width=100% height=45% type='application/pdf'/>
             
 
             <div id = "logo">
