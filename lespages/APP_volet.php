@@ -59,6 +59,10 @@ include 'php_functions/bdd_connect.php';
                 </ul>
             </div>
 
+            <div id = "logo">
+                <img src="../documents/photos/logopopo.png"  width="400">
+            </div>
+
 		</div>
 
    </body>
