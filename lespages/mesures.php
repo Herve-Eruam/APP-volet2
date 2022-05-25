@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_save_path("../sessionPhp");
 session_start();
 include 'php_functions/bdd_connect.php'
@@ -22,10 +22,11 @@ include 'php_functions/bdd_connect.php'
 
 		<div id=main>
 
+			
 	   		<div id="titre">
 	   			<h1 style="text-align:center">Mesures</h1>
 	   		</div>
-			
+			<h2> Vous trouverez ici les mesures des differents capteurs presents sur notre volet:</h2>
 			<?php
 			$sql = "SELECT * FROM AppVOLET_Mesures";
 
