@@ -5,12 +5,12 @@ session_start();
 include 'php_functions/bdd_connect.php';
 
 if(!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['suggestion'])){
-	$sql_request = "DELETE FROM `AppVOLET_Sugest` WHERE `id_sugest` = " .$_POST['delSugId'];
+	$sql_request = "INSERT INTO AppVOLET_Sugest (nom, prenom, descriptions) values (\"" .$_POST['nom'] ."\",\"" .$_POST["prenom"] ."\",\"" .$_POST["suggestion"] ."\")" ;
 	$result = BDD_request($sql_request);
 
 }
 
-if(!empty($_POST['btn_ajout_sugg'])){
+if(!empty($_POST['btn_del_sugg'])){
 	$sql_request = "DELETE FROM `AppVOLET_Sugest` WHERE `id_sugest` = " .$_POST['delSugId'] ;
 	$result = BDD_request($sql_request);
 
@@ -70,7 +70,7 @@ if(!empty($_POST['btn_ajout_sugg'])){
 							echo("<p id=date_sug>date:" .$row["instant"] ."</p>" );
 							echo "<form method=\"post\">";
 								echo("<input type=\"hidden\" name=\"delSugId\" value= " .$row["id_sugest"] ."  required /></p>");
-								echo("<p><button type=\"submit\" name=\"btn_ajout_sugg\" value=\"ajout\">Supprimer la suggestion</button></p>");
+								echo("<p><button type=\"submit\" name=\"btn_del_sugg\" value=\"ajout\">Supprimer la suggestion</button></p>");
 							echo "</form>";
 							
 							$row = mysqli_fetch_array($result);
