@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_save_path("../sessionPhp");
 session_start();
 
@@ -57,6 +57,10 @@ include 'php_functions/bdd_connect.php';
                     </li>
 
                 </ul>
+            </div>
+
+            <div id = "logo">
+                <img src="../documents/photos/logopopo.png"  width="400">
             </div>
 
 		</div>
