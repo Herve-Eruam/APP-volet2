@@ -1,4 +1,19 @@
-﻿#menu {
+﻿#titre_menu {
+	color: #333333;
+	font-family: Camria;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+	text-shadow: #ffe69a 0 -1px 0, #ff6767 2px 2px 0, #ca3333 3px 3px 0, #770a0c 4px 4px 0, #333 5px 5px 10px;
+	color: #FFE5BF;
+	background: linear-gradient(60deg, #708090,#EFD4B4 10%,#708090 );
+	opacity: 0.7;
+	width: 300px;
+	height: 48px;
+}
+
+
+#menu {
 	position: absolute;
 	background-color : #FFE4C4 ; 
 	width: 300px;
@@ -18,7 +33,7 @@
 
 #espace_menu {
 	width: 300px;
-	height: 60px;
+	height: 27px;
 }
 
 .bouttons_menu {
