@@ -16,7 +16,7 @@ create table AppVOLET_Techno(id_techno integer auto_increment primary key,
 		types varchar(30), /*capteur ou actionneur ou intelligence*/
 		position varchar(50), /* interieur ou exterieur */
 		unite varchar(5), /* degre,lux*/
-		descript varchar(150) /*Justification*/
+		descript varchar(300) /*Justification*/
 		);
 
 create table AppVOLET_Mesures(id_mesure integer auto_increment primary key,

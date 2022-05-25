@@ -33,11 +33,11 @@ include 'php_functions/bdd_connect.php'
 			   	<div id="c1">
 				   
 				   <?php 
-				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
-
+				   $sql= "SELECT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
+					echo $sql;
 				   $result = BDD_request($sql);
 
-				   $row = mysqli_fetch_array($result);
+				   $row = mysqli_fetch_assoc($result);
 
 				   echo"<li>".$row["nom"]."</li><br>";
 				   echo "<br>";
@@ -49,18 +49,18 @@ include 'php_functions/bdd_connect.php'
 
 			   <div id="c2">
 			   <?php 
-			   /*
-				   $sql= "SELECT DISTINCT nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = capteur and  nom= Capteur de luminosite";
+			   
+				   $sql= "SELECT  nom,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types like 'capteur' and  nom like 'Capteur de luminosite' ";
 
 				   $result = BDD_request($sql);
 
-				   $row = mysqli_fetch_array($result);
+				   $row = mysqli_fetch_assoc($result);
 
 				   echo"<li>".$row["nom"]."</li><br>";
 				   echo "<br>";
 				   echo "<li>"."Les capteurs de Luminosités sont positionés".$row["position"]."</li><br>";
 				   echo"<li>".$row["descript"]."</li><br>";
-				   */
+				   
 				   ?>
 			   
 			   </div>
