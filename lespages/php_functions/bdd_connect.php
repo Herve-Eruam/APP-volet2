@@ -1,5 +1,6 @@
 <?php   
-include('/home/eruamh/public_html/APP_volet/lespages/bd_app.php');
+chdir(dirname(__FILE__));
+include('../bd_app.php');
 function BDD_connect(){
         global $mysqlUsername;
         global $mysqlPassword;
