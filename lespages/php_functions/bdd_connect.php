@@ -1,15 +1,23 @@
 <?php   
-
+chdir(dirname(__FILE__));
+include('../bd_app.php');
 function BDD_connect(){
+        global $mysqlUsername;
+        global $mysqlPassword;
+        global $mysqlDatabase;
+        global $mysqlHost;
+        global $mysqlSocket;
+
         /*Connexion � la base de donn�es sur le serveur tp-epua*/
-		$conn = @mysqli_connect("tp-epua:3308", "meyerj", "8n9brckq");    
-		
+		//$conn = @mysqli_connect(, $mysqlUsername, $mysqlPassword);    
+		$conn = @mysqli_connect("tp-epua:3308", $mysqlUsername, $mysqlPassword);    
+
 		if (mysqli_connect_errno()) {
             $msg = "erreur ". mysqli_connect_error();
         } else {  
-            $msg = "connect� au serveur " . mysqli_get_host_info($conn);
+            $msg = "connecté au serveur " . mysqli_get_host_info($conn);
             /*S�lection de la base de donn�es*/
-            mysqli_select_db($conn, "meyerj"); 
+            mysqli_select_db($conn, $mysqlDatabase); 
             /*mysqli_select_db($conn, "etu"); */ /*s�lection de la base sous la VM info642*/
 		
             /*Encodage UTF8 pour les �changes avecla BD*/
