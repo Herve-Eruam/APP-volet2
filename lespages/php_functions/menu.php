@@ -13,6 +13,8 @@
     <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
 	<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>
     <a href="mesures.php" class ="bouttons_menu" id="boutton_mesures">Mesures</a>
+	<a href="suggestion.php" class ="bouttons_menu" id="boutton_mesures">Suggestion</a>
+
 	<?php
 			if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
 			{
