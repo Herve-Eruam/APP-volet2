@@ -1,0 +1,21 @@
+﻿
+div#lesMesures {
+    display: flex;
+    flex-wrap: wrap;
+    width : 100%;
+}
+
+.mesure {
+    width: 100%;
+    border: 1px solid #000;
+    background-color: gray;
+    margin: 2px;
+}
+
+.valeur {
+    color: blue;
+}
+
+.seuil_haut {
+    background-color: red;
+}

@@ -8,12 +8,11 @@
 
 	</div>
 		
-	<a href="home.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
+	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
     <a href="technologie.php" class ="bouttons_menu" id="boutton_technologie">Technologies</a>
     <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
 	<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>
     <a href="mesures.php" class ="bouttons_menu" id="boutton_mesures">Mesures</a>
-    <a href="connexion.php" class ="bouttons_menu" id="boutton_connexion">Connexion</a>
 	<?php
 			if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true)
 			{
@@ -24,8 +23,12 @@
 		$val = mysqli_fetch_array($result);
 		echo $val["nom"] ." " .$val["prenom"];
 	?>)</a>
-
+	<a href="connexion.php?boutton_deconnexion=deco" class ="bouttons_menu" id="boutton_connexion">Deconnexion</a>
 	<?php
+			}else{
+	?>
+	    <a href="connexion.php" class ="bouttons_menu" id="boutton_connexion">Connexion</a>
+		<?php
 			}
 	?>
 	<div id="pied">
