@@ -2,7 +2,7 @@
 	position: absolute;
 	background-color : #FFE4C4 ; 
 	width: 300px;
-	height: 1300px;
+	height: 1400px;
 	clear: right;
 	border-left: 1px solid #708090;
 	border-bottom: 1px solid #708090;
@@ -11,7 +11,7 @@
 }
 
 #pied {
-	margin: 850px 0px 10px 0px;
+	margin: 900px 0px 10px 0px;
 	color: #7B7B7B;
 	text-align: left;
 }
