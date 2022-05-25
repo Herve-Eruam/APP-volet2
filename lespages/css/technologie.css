@@ -2,6 +2,8 @@
     font-weight: bold;
     font-size: 22px;
     text-indent:10px;
+    text-decoration-line: underline;
+    
 
 }
 
@@ -18,6 +20,7 @@
     font-weight: bold;
     font-size: 22px;
     text-indent: 10px;
+    text-decoration-line: underline;
 }
 
 #c22 {
@@ -32,6 +35,8 @@
     font-weight: bold;
     font-size: 22px;
     text-indent: 10px;
+    text-decoration-line: underline;
+
 }
 
 #c32 {
@@ -46,6 +51,8 @@
     font-weight: bold;
     font-size: 22px;
     text-indent: 10px;
+    text-decoration-line: underline;
+
 }
 
 #c42 {
@@ -54,4 +61,58 @@
 
 #c43 {
     text-indent: 90px;
+}
+
+#a11 {
+    font-weight: bold;
+    font-size: 22px;
+    text-indent: 10px;
+    text-decoration-line: underline;
+
+}
+
+#a12 {
+    text-indent: 90px;
+}
+
+#a13 {
+    text-indent: 90px;
+}
+
+#a21 {
+    font-weight: bold;
+    font-size: 22px;
+    text-indent: 10px;
+    text-decoration-line: underline;
+
+}
+
+#a22 {
+    text-indent: 90px;
+}
+
+#a23 {
+    text-indent: 90px;
+}
+
+#i11 {
+    font-weight: bold;
+    font-size: 22px;
+    text-indent: 10px;
+    text-decoration-line: underline;
+
+}
+
+#i12 {
+    text-indent: 90px;
+}
+
+#i13 {
+    text-indent: 90px;
+}
+
+#T1 {
+    color :#85BB65;
+    font-style: italic;
+    text-shadow: 2px 2px grey;
 }

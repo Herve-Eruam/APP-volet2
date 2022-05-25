@@ -30,7 +30,7 @@ include 'php_functions/bdd_connect.php'
 
 
 	   		<div id="capteur">
-	   			<h1 style="text-align:center">Capteurs utilisés</h1>
+	   			<h1 id =T1 style="text-align:center">Capteurs utilisés</h1>
 			   	<div id="c1">
 				   
 				   <?php 
@@ -103,7 +103,7 @@ include 'php_functions/bdd_connect.php'
 			</div>
 
 			<div id="actionneur">
-	   			<h1 style="text-align:center">Actionneurs utilisés</h1>
+	   			<h1 id =T1 style="text-align:center">Actionneurs utilisés</h1>
 			    <div id="a1">
 				   <?php 
 			   
@@ -113,10 +113,10 @@ include 'php_functions/bdd_connect.php'
 
 				   $row = mysqli_fetch_array($result);
 
-				   echo"<li>".$row["nom"]."</li><br>";
+				   echo"<li id = a11>".$row["nom"]."</li><br>";
 				 
-				   echo "<li>"."Les ".$row["nom"]." sont positionés au niveau des".$row["position"]."</li><br>";
-				   echo"<li>".$row["descript"]."</li><br>";
+				   echo "<li id = a12>"."Les ".$row["nom"]." sont positionés au niveau des".$row["position"]."</li><br>";
+				   echo"<li id = a13>".$row["descript"]."</li><br>";
 				   echo "<br>";
 				   ?>
 			   
@@ -131,9 +131,9 @@ include 'php_functions/bdd_connect.php'
 
 				   $row = mysqli_fetch_array($result);
 
-				   echo"<li>".$row["nom"]."</li><br>";
-				   echo "<li>"."Les ".$row["nom"]." sont positionés au niveau du".$row["position"]."</li><br>";
-				   echo"<li>".$row["descript"]."</li><br>";
+				   echo"<li id = a21>".$row["nom"]."</li><br>";
+				   echo "<li id = a22>"."Les ".$row["nom"]." sont positionés au niveau du".$row["position"]."</li><br>";
+				   echo"<li id = a23>".$row["descript"]."</li><br>";
 				   echo "<br>";
 				   ?>
 
@@ -144,7 +144,7 @@ include 'php_functions/bdd_connect.php'
 			</div>
 		
 			<div id="inteligence">
-	   			<h1 style="text-align:center">Inteligence</h1>
+	   			<h1 id =T1 style="text-align:center">Inteligence</h1>
 			   <div id="i1">
 			   <?php 
 			   
@@ -154,9 +154,9 @@ include 'php_functions/bdd_connect.php'
 
 				   $row = mysqli_fetch_array($result);
 
-				   echo"<li>".$row["nom"]."</li><br>";
-				   echo "<li>"."La ".$row["nom"]." est positionés au niveau du".$row["position"]."</li><br>";
-				   echo"<li>".$row["descript"]."</li><br>";
+				   echo"<li id = i11>".$row["nom"]."</li><br>";
+				   echo "<li id = i12>"."La ".$row["nom"]." est positionés au niveau du".$row["position"]."</li><br>";
+				   echo"<li id = i13>".$row["descript"]."</li><br>";
 				   echo "<br>";
 				   ?>
 			   </div>
