@@ -1,6 +1,7 @@
 drop table if exists AppVolet_Groupe cascade;
 drop table if exists AppVOLET_Techno cascade;
 drop table if exists AppVOLET_Mesures cascade;
+drop table if exists AppVOLET_Sugest cascade;
 
 
 create table AppVolet_Groupe(id_membre integer auto_increment primary key,
@@ -24,6 +25,8 @@ create table AppVOLET_Mesures(id_mesure integer auto_increment primary key,
 		instant timestamp,
 		valeur numeric
 		);
+
+
 
 
 
