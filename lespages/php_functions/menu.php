@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 	echo "<link rel=\"stylesheet\" href=\"css/menu.css\">";
 ?>
 
@@ -7,8 +7,12 @@
 	<div id="espace_menu">
 
 	</div>
+
+	<div id="titre_menu">
+		<a >Menu</a>
+	</div>
 		
-	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Menu</a>
+	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Acceuil</a>
     <a href="technologie.php" class ="bouttons_menu" id="boutton_technologie">Technologies</a>
     <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
 	<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>

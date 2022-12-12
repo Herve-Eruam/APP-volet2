@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_save_path("../sessionPhp");
 session_start();
 
@@ -58,6 +58,9 @@ include 'php_functions/bdd_connect.php';
 
                 </ul>
             </div>
+            
+            <embed src="../documents/presentation_S6.pdf"width=100% height=45% type='application/pdf'/>
+            
 
             <div id = "logo">
                 <img src="../documents/photos/logopopo.png"  width="400">
