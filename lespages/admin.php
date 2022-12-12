@@ -5,7 +5,7 @@ include 'php_functions/bdd_connect.php';
 
 if(isset($_SESSION["adminMode"]) and $_SESSION["adminMode"] == true){
 	if(!empty($_GET['newmdp'])){
-		$sql_request = "UPDATE AppVOLET_Groupe SET pass = \"" .md5($_GET['newmdp']) ."\" WHERE id_membre = " .$_SESSION["id_membre_connected"] ;
+		$sql_request = "UPDATE AppVolet_Groupe SET pass = \"" .md5($_GET['newmdp']) ."\" WHERE id_membre = " .$_SESSION["id_membre_connected"] ;
 		BDD_request($sql_request);
 	}
 }

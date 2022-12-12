@@ -3,18 +3,18 @@ session_save_path("../sessionPhp");
 session_start();
 include 'php_functions/bdd_connect.php';
 if(!empty($_GET['membre_select']) and !empty($_GET['submitDesc'])){
-	$sql_request = "UPDATE AppVOLET_Groupe SET descriptions = \"" .$_GET['description'] ."\" WHERE id_membre = " .$_GET["membre_select"] ;
+	$sql_request = "UPDATE AppVolet_Groupe SET descriptions = \"" .$_GET['description'] ."\" WHERE id_membre = " .$_GET["membre_select"] ;
 	$result = BDD_request($sql_request);
 
 	}
 $resAddMember = 0;//rien
 if(!empty($_GET['btn_ajout_membre'])){
 	if($_GET['mdp'] == $_GET['mdp_conf']){
-		$sql_request = "INSERT INTO AppVOLET_Groupe (nom, prenom, descriptions, pass) VALUES ('" .$_GET['nom'] ."', '" .$_GET['prenom']  ."', '" .$_GET['description']  ."', '" .md5($_GET['mdp'])  ."')";
+		$sql_request = "INSERT INTO AppVolet_Groupe (nom, prenom, descriptions, pass) VALUES ('" .$_GET['nom'] ."', '" .$_GET['prenom']  ."', '" .$_GET['description']  ."', '" .md5($_GET['mdp'])  ."')";
 		$res = BDD_request($sql_request);
 		if($res != false){
 			$resAddMember = 1; //membre ajouté
-			$sql_request = "SELECT id_membre FROM AppVOLET_Groupe WHERE nom = \"" .$_GET['nom'] ."\" and prenom = \"" .$_GET['prenom'] ."\"";$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVOLET_Groupe");
+			$sql_request = "SELECT id_membre FROM AppVolet_Groupe WHERE nom = \"" .$_GET['nom'] ."\" and prenom = \"" .$_GET['prenom'] ."\"";$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVOLET_Groupe");
 			$result = BDD_request($sql_request);
 			$val = mysqli_fetch_array($result);	
 			$_GET['membre_select'] = $val["id_membre"];
@@ -29,7 +29,7 @@ if(!empty($_GET['btn_ajout_membre'])){
 	}
 	
 	if(!empty($_GET['deleteMember']) and $_GET['deleteMember'] and !empty($_GET['membre_selectForSuppr']) ){
-	$sql_request = "DELETE FROM `AppVOLET_Groupe` WHERE `id_membre` = " .$_GET['membre_selectForSuppr'] ;
+	$sql_request = "DELETE FROM `AppVolet_Groupe` WHERE `id_membre` = " .$_GET['membre_selectForSuppr'] ;
 	$result = BDD_request($sql_request);
 	
 	}
@@ -67,7 +67,7 @@ if(!empty($_GET['btn_ajout_membre'])){
 					<form action="groupe.php" method="get">
 						<select name="membre_select"> 
 							<?php
-								$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVOLET_Groupe");
+								$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVolet_Groupe");
 								echo "<option value=\"\">--Choix du membre du groupe--</option>";
 								while ($val = mysqli_fetch_array($result)) {
 									if(!empty($_GET['membre_select']) && $_GET['membre_select']==$val['id_membre']) $selected ='selected'; else $selected ='';
@@ -79,7 +79,7 @@ if(!empty($_GET['btn_ajout_membre'])){
 					</form>
 					<?php
 					if(!empty($_GET['membre_select'])){
-						$sql_request = "SELECT nom_photo, descriptions FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'];
+						$sql_request = "SELECT nom_photo, descriptions FROM AppVolet_Groupe WHERE id_membre=".$_GET['membre_select'];
 						$result = BDD_request($sql_request);
 						$val = mysqli_fetch_array($result);
 						echo "<img src=\"../documents/photos/" .$val["nom_photo"] ."\" height=\"300\">";

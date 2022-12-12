@@ -4,7 +4,7 @@ session_start();
 
 include 'php_functions/bdd_connect.php';
 
-
+/*-----------------------------FONCTION GET NOTE------------------------------------*/ 
 	function getNote(){
 		$note=0;
 
@@ -34,8 +34,51 @@ include 'php_functions/bdd_connect.php';
 		if($_POST['question7']=='reponse4' ){
 			$note=$note+1;
 		}
-		
-		echo "Votre note pour ce test est : ".$note."/7";
+	echo "Votre note pour ce test est : ".$note."/7";
+	echo"<br>";
+	echo"<br>";
+	/*---------CORRECTION DES QUESTIONS-----------*/
+if($_POST['question1']!='reponse1'){
+	echo "La bonne reponse de la question 1 etait "."Moyen Age";
+	echo"<br>";
+
+}
+
+if($_POST['question2']!='reponse2' ){
+	echo "La bonne reponse de la question 2 etait "."En tissu";	
+	echo"<br>";
+}
+
+
+if($_POST['question3']!='reponse2' ){
+	echo "La bonne reponse de la question 3 etait "."18 eme siecle";
+	echo"<br>";
+}
+
+if($_POST['question4']!='reponse2'){
+	echo "La bonne reponse de la question 4 etait "."25%";
+	echo"<br>";
+}
+
+if($_POST['question5']!='reponse3'){
+	echo "La bonne reponse de la question 5 etait "."Le confort";	
+	echo"<br>";
+
+}
+
+if($_POST['question6']!='reponse1'){
+	echo "La bonne reponse de la question 6 etait "."Le bois";
+	echo"<br>";
+}
+
+if($_POST['question7']!='reponse4' ){
+	echo "La bonne reponse de la question 7 etait "."1300 euros";
+	echo"<br>";
+
+}
+
+
+/*-----------------------------------------------------------------------------------*/		
 		
 	}
 
@@ -76,7 +119,7 @@ include 'php_functions/bdd_connect.php';
 									//echo"<label><input type='radio' name='cheval' value='blanc' />"."blanc"."</label><br />";
 									$it=$val['id_question'];
 									
-									echo "<li id='quest'>".$val['question']."</li><br>";
+									echo "<li id='quest'>"."$it)".$val['question']."</li><br>";
 									
 									echo "<select name='question" .$it ."'>"."<br>";
 									echo"<option type='radio'  value='reponse1' />".$val['reponse1']."</option><br />";
@@ -99,6 +142,8 @@ include 'php_functions/bdd_connect.php';
 					 if(isset($_POST['question4']) == true){
 						getNote();
 					 }
+
+
 					?>
 					
 				</div>

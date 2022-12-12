@@ -5,13 +5,13 @@ session_start();
 include 'php_functions/bdd_connect.php';
 
 if(!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['suggestion'])){
-	$sql_request = "INSERT INTO AppVOLET_Sugest (nom, prenom, descriptions) values (\"" .$_POST['nom'] ."\",\"" .$_POST["prenom"] ."\",\"" .$_POST["suggestion"] ."\")" ;
+	$sql_request = "INSERT INTO AppVolet_Sugest (nom, prenom, descriptions) values (\"" .$_POST['nom'] ."\",\"" .$_POST["prenom"] ."\",\"" .$_POST["suggestion"] ."\")" ;
 	$result = BDD_request($sql_request);
 
 }
 
 if(!empty($_POST['btn_del_sugg'])){
-	$sql_request = "DELETE FROM `AppVOLET_Sugest` WHERE `id_sugest` = " .$_POST['delSugId'] ;
+	$sql_request = "DELETE FROM `AppVolet_Sugest` WHERE `id_sugest` = " .$_POST['delSugId'] ;
 	$result = BDD_request($sql_request);
 
 }
@@ -60,7 +60,7 @@ if(!empty($_POST['btn_del_sugg'])){
 					<div>
 					</div>
 					<?php
-						$sql_request = "Select	* FROM AppVOLET_Sugest" ;
+						$sql_request = "Select	* FROM AppVolet_Sugest" ;
 						$result = BDD_request($sql_request);
 						$row = mysqli_fetch_array($result);
 						while ($row != false) {

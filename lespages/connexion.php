@@ -5,7 +5,7 @@ session_start();
 include 'php_functions/bdd_connect.php';
 
 if(!empty($_GET['membre_select']) and !empty($_GET['mdp'])){
-	$sql_request = "SELECT id_membre FROM AppVOLET_Groupe WHERE id_membre=".$_GET['membre_select'] ." AND pass = \"" .md5($_GET['mdp']) ."\"";
+	$sql_request = "SELECT id_membre FROM AppVolet_Groupe WHERE id_membre=".$_GET['membre_select'] ." AND pass = \"" .md5($_GET['mdp']) ."\"";
 	$result = BDD_request($sql_request);
 	$val = mysqli_fetch_array($result);
 	if($val != null) {
@@ -58,7 +58,7 @@ if(!empty($_GET['boutton_deconnexion'])){
 				<form method=get">
 					<select name="membre_select"> 
 						<?php
-							$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVOLET_Groupe");
+							$result = BDD_request("SELECT nom, prenom, id_membre FROM AppVolet_Groupe");
 							echo "<option value=\"\">--Choix du membre du groupe--</option>";
 							while ($val = mysqli_fetch_array($result)) {
 								if(!empty($_GET['membre_select']) && $_GET['membre_select']==$val['id_membre']) $selected ='selected'; else $selected ='';

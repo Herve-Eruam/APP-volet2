@@ -28,7 +28,7 @@ include 'php_functions/bdd_connect.php'
 	   		</div>
 			<h2> Vous trouverez ici les mesures des differents capteurs presents sur notre volet:</h2>
 			<?php
-			$sql = "SELECT * FROM AppVOLET_Mesures";
+			$sql = "SELECT * FROM AppVolet_Mesures";
 
 			$result = BDD_request($sql);
 

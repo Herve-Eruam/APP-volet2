@@ -34,7 +34,7 @@ include 'php_functions/bdd_connect.php'
 			   	<div id="c1">
 				   
 				   <?php 
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
 
 				   $result = BDD_request($sql);
 
@@ -51,7 +51,7 @@ include 'php_functions/bdd_connect.php'
 			   <div id="c2">
 			   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur 'and  nom= 'Capteur de luminosite' ";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur 'and  nom= 'Capteur de luminosite' ";
 
 				   $result = BDD_request($sql);
 
@@ -69,7 +69,7 @@ include 'php_functions/bdd_connect.php'
 			   <div id="c3">
 			   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom= 'Capteur de presence'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur' and  nom= 'Capteur de presence'";
 
 				   $result = BDD_request($sql);
 
@@ -87,7 +87,7 @@ include 'php_functions/bdd_connect.php'
 			   <div id="c4">
 			   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Capteur' and  nom= 'Capteur de courant'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur' and  nom= 'Capteur de courant'";
 
 				   $result = BDD_request($sql);
 
@@ -107,7 +107,7 @@ include 'php_functions/bdd_connect.php'
 			    <div id="a1">
 				   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Actionneur' and  nom= 'Moteur'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Actionneur' and  nom= 'Moteur'";
 
 				   $result = BDD_request($sql);
 
@@ -125,7 +125,7 @@ include 'php_functions/bdd_connect.php'
 			   <div id="a2">
 			   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Actionneur' and  nom= 'Pont en H'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Actionneur' and  nom= 'Pont en H'";
 
 				   $result = BDD_request($sql);
 
@@ -148,7 +148,7 @@ include 'php_functions/bdd_connect.php'
 			   <div id="i1">
 			   <?php 
 			   
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVOLET_Techno  WHERE  types = 'Intelligence' and  nom= 'Raspberry'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Intelligence' and  nom= 'Raspberry'";
 
 				   $result = BDD_request($sql);
 
