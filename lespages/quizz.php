@@ -111,7 +111,7 @@ if($_POST['question7']!='reponse4' ){
 						<p name="question"> 
 						
 							<?php
-								$result = BDD_request("SELECT * FROM AppVOLET_Quizz");
+								$result = BDD_request("SELECT * FROM AppVolet_Quizz");
 								$note=0;
 
 								while ($val = mysqli_fetch_assoc($result)) {
