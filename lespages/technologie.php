@@ -34,7 +34,7 @@ include 'php_functions/bdd_connect.php'
 			   	<div id="c1">
 				   
 				   <?php 
-				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de temperature'";
+				   $sql= "SELECT  nom ,types, position, unite, descript FROM AppVolet_Techno  WHERE  types = 'Capteur' and  nom = 'Capteur de température'";
 
 				   $result = BDD_request($sql);
 
@@ -59,7 +59,7 @@ include 'php_functions/bdd_connect.php'
 
 				   echo"<li id = c21>".$row["nom"]."</li><br>";
 				   
-				   echo "<li id = c22>"."Les capteurs de Luminosités sont positionés".$row["position"]."</li><br>";
+				   echo "<li id = c22>"."Les capteurs de luminosité sont positionés à l'".$row["position"]."</li><br>";
 				   echo"<li id = c23>".$row["descript"]."</li><br>";
 				   echo "<br>";
 				   ?>
@@ -77,7 +77,7 @@ include 'php_functions/bdd_connect.php'
 
 				   echo"<li id = c31>".$row["nom"]."</li><br>";
 				   
-				   echo "<li id = c32>"."Les capteurs de Présence sont positionés".$row["position"]."</li><br>";
+				   echo "<li id = c32>"."Les capteurs de Présence sont positionés à l'".$row["position"]."</li><br>";
 				   echo"<li id = c33>".$row["descript"]."</li>\<br>";
 				   echo "<br>";
 				   ?>
@@ -95,7 +95,7 @@ include 'php_functions/bdd_connect.php'
 
 				   echo"<li id = c41>".$row["nom"]."</li><br>";
 				   
-				   echo "<li id = c42>"."Les capteurs de courants sont positionés".$row["position"]."</li><br>";
+				   echo "<li id = c42>"."Les capteurs de courants sont positionés dans le ".$row["position"]."</li><br>";
 				   echo"<li id = c43>".$row["descript"]."</li><br>";
 				   echo "<br>";
 				   ?>
@@ -144,7 +144,7 @@ include 'php_functions/bdd_connect.php'
 			</div>
 		
 			<div id="inteligence">
-	   			<h1 id =T1 style="text-align:center">Inteligence</h1>
+	   			<h1 id =T1 style="text-align:center">Intelligence</h1>
 			   <div id="i1">
 			   <?php 
 			   
