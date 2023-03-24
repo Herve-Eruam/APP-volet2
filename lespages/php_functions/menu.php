@@ -12,7 +12,7 @@
 		<a >Menu</a>
 	</div>
 		
-	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Acceuil</a>
+	<a href="APP_volet.php" class ="bouttons_menu" id="boutton_menu">Accueil</a>
     <a href="technologie.php" class ="bouttons_menu" id="boutton_technologie">Technologies</a>
     <a href="groupe.php" class ="bouttons_menu" id="boutton_groupe">Groupe</a>
 	<a href="quizz.php" class ="bouttons_menu" id="boutton_quizz">Quizz</a>
